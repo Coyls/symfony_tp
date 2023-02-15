@@ -6,6 +6,12 @@ use App\Repository\ReactionRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+enum Type: string
+{
+    case LIKE = "LIKE";
+    case UNLIKE = "UNLIKE";
+}
+
 #[ORM\Entity(repositoryClass: ReactionRepository::class)]
 class Reaction
 {
@@ -20,8 +26,9 @@ class Reaction
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $createdAt = null;
 
+    // remplacer par string si marche pas
     #[ORM\Column(length: 255)]
-    private ?string $type = null;
+    private ?Type $type = null;
 
     public function getId(): ?int
     {
@@ -57,7 +64,7 @@ class Reaction
         return $this->type;
     }
 
-    public function setType(string $type): self
+    public function setType(Type $type): self
     {
         $this->type = $type;
 
