@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Link
+{% endblock %}
+
+{% block body %}
+	<ul>
+		{% for link in links %}
+			<li>{{ link.getTitle() }}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

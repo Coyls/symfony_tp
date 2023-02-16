@@ -30,6 +30,7 @@ class Link
 
     public function __construct()
     {
+        $this->createdAt = new \DateTimeImmutable();
         $this->reactions = new ArrayCollection();
     }
 

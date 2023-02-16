@@ -1,0 +1,26 @@
+.line {
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+    gap: 12px;
+    align-items: center;
+
+}
+
+.vote {
+    display: flex;
+    flex-direction: column;
+}
+
+.vote button {
+    font-size: 3rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.text p {
+    margin: 0;
+}

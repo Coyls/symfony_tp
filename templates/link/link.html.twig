@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Link
+{% endblock %}
+
+{% block body %}
+
+	<h2>{{ link.getTitle() }}</h2>
+	<h3>{{ link.getUrl() }}</h3>
+
+{% endblock %}

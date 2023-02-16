@@ -1,0 +1,25 @@
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="/styles/linkLine.css"/>
+{% endblock %}
+
+<div class="line">
+	<p>126{# {{ likes }} #}</p>
+	<div class="vote">
+		<button type="submit">
+			+
+		</button>
+		<button type="submit">
+			-
+		</button>
+	</div>
+	<div class="text">
+		<p>{{ link.getTitle() }}</p>
+		<a>{{ link.getUrl() }}</a>
+
+	</div>
+	<a href="{{ path('delete_link', {link : link.id}) }}">
+
+		Delete
+	</a>
+
+</div>
